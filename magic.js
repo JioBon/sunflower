@@ -7,7 +7,7 @@ const texts = ["What about now?", "Still not happy?", "Please be happy now",
                 "Smile ka na please", "Did I make you smile now?", "Give me a smile!"];
 
 const happytxt = ["Yehey! You're a lot pretty when you smile", "I'm glad I made you happy",
-                "Tingin nga smile", "Apply ako happy pill mo"]
+                "Tingin nga ng ngiti yieee", "Apply ako happy pill mo"]
 
 function animateFalling(to_fall, endPosition) {
     let startTime;
@@ -35,6 +35,8 @@ yesButton.addEventListener('click', () => {
     falling_flowers.forEach (box => {
         box.style.zIndex = 5;
     })
+
+    question.innerHTML = happytxt[Math.floor(Math.random() * happytxt.length)];
 
     const numOfFlowers = 10;
     const growGarden = () => {
