@@ -1,5 +1,5 @@
 let noButton = document.getElementById('nobtn');
-let yesButton = document.getElementbyId('yesbtn');
+let yesButton = document.getElementById('yesbtn');
 let question = document.getElementById('question');
 const btntexts = ["Not yet", "Nooo", "I need more sunflowers!", "GIVE ME SUNFLOWER",
                     "Hindi pa eh :(", "Still sad", "Do better in making me smile"];
