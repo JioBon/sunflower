@@ -1,4 +1,5 @@
-let button = document.getElementById('nobtn');
+let noButton = document.getElementById('nobtn');
+let yesButton = document.getElementbyId('yesbtn')
 let question = document.getElementById('question');
 const btntexts = ["Not yet", "Nooo", "I need more sunflowers!", "GIVE ME SUNFLOWER",
                     "Hindi pa eh :(", "Still sad", "Do better in making me smile"];
@@ -24,18 +25,24 @@ function animateFalling(to_fall, endPosition) {
     window.requestAnimationFrame(step);
 }
 
+yesButton.addEventListener('click', () => {
+    
+})
+
 // button.style.color = 'red';
-button.addEventListener('click', () => {
-    var new_x = Math.floor(Math.random() * 90);
+noButton.addEventListener('click', () => {
+    var new_x = Math.floor(Math.random() * 80);
     var new_y = Math.floor(Math.random() * 90);
 
-    var current_x = button.style.left;
-    var current_y = button.style.top;
+    var current_x = noButton.style.left;
+    var current_y = noButton.style.top;
     if (!current_y) current_y = '100px';
 
-    button.style.top = new_y+"vh";
-    button.style.left = new_x+"vw";
-    button.innerHTML = btntexts[Math.floor(Math.random() * btntexts.length)];
+    noButton.style.position = "absolute"
+
+    noButton.style.top = new_y+"vh";
+    noButton.style.left = new_x+"vw";
+    noButton.innerHTML = btntexts[Math.floor(Math.random() * btntexts.length)];
     question.innerHTML = texts[Math.floor(Math.random() * texts.length)];
 
     var img = document.createElement("img");
@@ -46,7 +53,7 @@ button.addEventListener('click', () => {
 
     if (!Number.isInteger(current_y)) current_y = parseInt(current_y);
     // console.log(current_y);
-    let y_fall = Math.floor(Math.random() * 101);
+    let y_fall = Math.floor(Math.random() * 50);
 
     animateFalling(img, current_y);
 
