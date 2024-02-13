@@ -9,6 +9,10 @@ const texts = ["What about now?", "Still not happy?", "Please be happy now",
 const happytxt = ["Yehey! You're a lot pretty when you smile", "I'm glad I made you happy",
                 "Tingin nga ng ngiti yieee", "Apply ako happy pill mo"]
 
+const valentinetexts = ["WILL YOU BE MY VALENTINES?", "VALENTINES LANG EHH", "Will you be my valentines? Pretty Please"]
+const yesvalentines = "You have availed a date with me on Cafe Nieves - Estancia de Lorenzo. See you"
+var initial_size = 20;
+
 function animateFalling(to_fall, endPosition) {
     let startTime;
     const duration = 1000;
@@ -36,7 +40,12 @@ yesButton.addEventListener('click', () => {
         box.style.zIndex = 5;
     })
 
-    question.innerHTML = happytxt[Math.floor(Math.random() * happytxt.length)];
+    //question.innerHTML = happytxt[Math.floor(Math.random() * happytxt.length)];
+
+    // Valentines text
+    question.innerHTML = yesvalentines
+    yesButton.remove();
+    noButton.remove();
 
     const numOfFlowers = 10;
     const growGarden = () => {
@@ -114,12 +123,26 @@ noButton.addEventListener('click', () => {
 
     noButton.style.top = new_y+"vh";
     noButton.style.left = new_x+"vw";
-    noButton.innerHTML = btntexts[Math.floor(Math.random() * btntexts.length)];
-    question.innerHTML = texts[Math.floor(Math.random() * texts.length)];
+    
+    //noButton.innerHTML = btntexts[Math.floor(Math.random() * btntexts.length)];
+    //question.innerHTML = texts[Math.floor(Math.random() * texts.length)];
 
+
+    //Valentines Texts
+    question.innerHTML = valentinetexts[Math.floor(Math.random() * valentinetexts.length)];
+
+    var currentFontSize = parseFloat(window.getComputedStyle(yesButton, null).getPropertyValue('font-size'));
+    var currentWidth = parseFloat(window.getComputedStyle(yesButton, null).getPropertyValue('width'));
+    var currentHeight = parseFloat(window.getComputedStyle(yesButton, null).getPropertyValue('height'));
+    
+    yesButton.style.fontSize = (currentFontSize + 10) + 'px';
+    yesButton.style.width = (currentWidth + 10) + 'px';
+    yesButton.style.height = (currentHeight + 10) + 'px';
+    
     var img = document.createElement("img");
     img.className = 'falling-element'
-    img.src = "sunflower.gif";
+    // img.src = "sunflower.gif";
+    img.src = "angry-dog.gif";
     img.style.left = current_x;
     img.style.transform = "translateX(-50%)";
 

@@ -22,7 +22,7 @@ body {
     mix-blend-mode: difference;
     /* font-size: 30vh 30vw; */
     font-size: 10vw;
-    z-index: 999;
+    z-index: 997;
     text-align: center;
 }
 
@@ -34,7 +34,7 @@ body {
     position: relative;
     /* top: 10wh;
     left: 30vh; */
-    z-index: 999;
+    z-index: 998;
     width: 20vh;
     background-color: rgb(138, 63, 29);
     color: white;
