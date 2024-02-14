@@ -40,12 +40,12 @@ yesButton.addEventListener('click', () => {
         box.style.zIndex = 5;
     })
 
-    //question.innerHTML = happytxt[Math.floor(Math.random() * happytxt.length)];
+    question.innerHTML = happytxt[Math.floor(Math.random() * happytxt.length)];
 
     // Valentines text
-    question.innerHTML = yesvalentines
-    yesButton.remove();
-    noButton.remove();
+    // question.innerHTML = yesvalentines
+    // yesButton.remove();
+    // noButton.remove();
 
     const numOfFlowers = 10;
     const growGarden = () => {
@@ -124,27 +124,29 @@ noButton.addEventListener('click', () => {
     noButton.style.top = new_y+"vh";
     noButton.style.left = new_x+"vw";
     
-    //noButton.innerHTML = btntexts[Math.floor(Math.random() * btntexts.length)];
-    //question.innerHTML = texts[Math.floor(Math.random() * texts.length)];
+    noButton.innerHTML = btntexts[Math.floor(Math.random() * btntexts.length)];
+    question.innerHTML = texts[Math.floor(Math.random() * texts.length)];
 
 
     //Valentines Texts
-    question.innerHTML = valentinetexts[Math.floor(Math.random() * valentinetexts.length)];
+    // question.innerHTML = valentinetexts[Math.floor(Math.random() * valentinetexts.length)];
 
-    var currentFontSize = parseFloat(window.getComputedStyle(yesButton, null).getPropertyValue('font-size'));
-    var currentWidth = parseFloat(window.getComputedStyle(yesButton, null).getPropertyValue('width'));
-    var currentHeight = parseFloat(window.getComputedStyle(yesButton, null).getPropertyValue('height'));
+    // var currentFontSize = parseFloat(window.getComputedStyle(yesButton, null).getPropertyValue('font-size'));
+    // var currentWidth = parseFloat(window.getComputedStyle(yesButton, null).getPropertyValue('width'));
+    // var currentHeight = parseFloat(window.getComputedStyle(yesButton, null).getPropertyValue('height'));
     
-    yesButton.style.fontSize = (currentFontSize + 10) + 'px';
-    yesButton.style.width = (currentWidth + 10) + 'px';
-    yesButton.style.height = (currentHeight + 10) + 'px';
+    // yesButton.style.fontSize = (currentFontSize + 10) + 'px';
+    // yesButton.style.width = (currentWidth + 10) + 'px';
+    // yesButton.style.height = (currentHeight + 10) + 'px';
     
+    let set_width = Math.floor(Math.random() * 10) + 20;
     var img = document.createElement("img");
     img.className = 'falling-element'
-    // img.src = "sunflower.gif";
-    img.src = "angry-dog.gif";
+    img.src = "sunflower.gif";
+    // img.src = "angry-dog.gif";
     img.style.left = current_x;
     img.style.transform = "translateX(-50%)";
+    img.style.width = set_width + "%";
 
     if (!Number.isInteger(current_y)) current_y = parseInt(current_y);
     // console.log(current_y);
