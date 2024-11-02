@@ -143,7 +143,7 @@ noButton.addEventListener('click', () => {
     img.className = 'falling-element'
     img.src = "sunflower.gif";
     // img.src = "angry-dog.gif";
-    img.style.left = new_x + "vh";
+    img.style.left = new_x + "vw";
     img.style.transform = "translateX(-50%)";
     img.style.width = set_width + "%";
 
