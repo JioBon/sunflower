@@ -111,8 +111,8 @@ yesButton.addEventListener('click', () => {
 
 // button.style.color = 'red';
 noButton.addEventListener('click', () => {
-    var new_x = Math.floor(Math.random() * 80);
-    var new_y = Math.floor(Math.random() * 90);
+    var new_x = Math.floor(Math.random() * 70);
+    var new_y = Math.floor(Math.random() * 85);
 
     var current_x = noButton.style.left;
     var current_y = noButton.style.top;
@@ -138,12 +138,12 @@ noButton.addEventListener('click', () => {
     // yesButton.style.width = (currentWidth + 10) + 'px';
     // yesButton.style.height = (currentHeight + 10) + 'px';
     
-    let set_width = Math.floor(Math.random() * 10) + 20;
+    let set_width = Math.floor(Math.random() * 30) + 10;
     var img = document.createElement("img");
     img.className = 'falling-element'
     img.src = "sunflower.gif";
     // img.src = "angry-dog.gif";
-    img.style.left = current_x;
+    img.style.left = new_x + "vh";
     img.style.transform = "translateX(-50%)";
     img.style.width = set_width + "%";
 
@@ -151,7 +151,7 @@ noButton.addEventListener('click', () => {
     // console.log(current_y);
     let y_fall = Math.floor(Math.random() * 50);
 
-    animateFalling(img, current_y);
+    animateFalling(img, new_y);
 
 
     // add to canvas
