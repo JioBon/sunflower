@@ -18,7 +18,7 @@ body {
     /* display: flex; */
     position: relative;
     color: darkgray;
-    margin-top: 30vh;
+    margin-top: 20vh;
     mix-blend-mode: difference;
     /* font-size: 30vh 30vw; */
     font-size: 10vw;
@@ -27,7 +27,7 @@ body {
 }
 
 #canvas {
-    /* margin-top: 50vh; */
+    /* margin-top: 50vh; */ 
     text-align: center;
 }
 #nobtn {

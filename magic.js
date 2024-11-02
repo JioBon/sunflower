@@ -1,13 +1,12 @@
 let noButton = document.getElementById('nobtn');
 let yesButton = document.getElementById('yesbtn');
 let question = document.getElementById('question');
-const btntexts = ["Not yet", "Nooo", "I need more sunflowers!", "GIVE ME SUNFLOWER",
-                    "Hindi pa eh :(", "Still sad", "Do better in making me smile"];
-const texts = ["What about now?", "Still not happy?", "Please be happy now",
-                "Smile ka na please", "Did I make you smile now?", "Give me a smile!"];
+const btntexts = ["Not yet", "I need more sunflowers!", "No", 
+                    "Hindi pa eh", "Still sad"];
+const texts = ["Here's a sunflower to lift your mood", "How about a sunflower",
+                "Did this make you smile now?", "A sunflower for a person with a bright smile"];
 
-const happytxt = ["Yehey! You're a lot pretty when you smile", "I'm glad I made you happy",
-                "Tingin nga ng ngiti yieee", "Apply ako happy pill mo"]
+const happytxt = ["Sunflower always does the job!", "More sunflower cuase you're happy!"]
 
 const valentinetexts = ["WILL YOU BE MY VALENTINES?", "VALENTINES LANG EHH", "Will you be my valentines? Pretty Please"]
 const yesvalentines = "You have availed a date with me on Cafe Nieves - Estancia de Lorenzo. See you"
@@ -119,10 +118,10 @@ noButton.addEventListener('click', () => {
     var current_y = noButton.style.top;
     if (!current_y) current_y = '100px';
 
-    noButton.style.position = "absolute"
+    //noButton.style.position = "absolute"
 
-    noButton.style.top = new_y+"vh";
-    noButton.style.left = new_x+"vw";
+    // noButton.style.top = new_y+"vh";
+    // noButton.style.left = new_x+"vw";
     
     noButton.innerHTML = btntexts[Math.floor(Math.random() * btntexts.length)];
     question.innerHTML = texts[Math.floor(Math.random() * texts.length)];
