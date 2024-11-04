@@ -3,10 +3,13 @@ let yesButton = document.getElementById('yesbtn');
 let question = document.getElementById('question');
 const btntexts = ["Not yet", "I need more sunflowers!", "No", 
                     "Hindi pa eh", "Still sad"];
-const texts = ["Here's a sunflower to lift your mood", "How about a sunflower",
-                "Did this make you smile now?", "A sunflower for a person with a bright smile"];
+const texts = ["Lipad na me para hilutin ka?", "Virtual hug wouldn't hurt", "I'll always lend my ears on you", "You have a great smile just like this sunflower!"];
+// const texts = ["Here's a sunflower to lift your mood", "How about a sunflower",
+//                 "Did this make you smile now?", "A sunflower for a person with a bright smile"];
 
-const happytxt = ["Sunflower always does the job!", "More sunflower cuase you're happy!"]
+               
+const happytxt = ["Always remember that I'll be here to support and listen to you"]
+//const happytxt = ["Sunflower always does the job!", "More sunflower cuase you're happy!"]
 
 const valentinetexts = ["WILL YOU BE MY VALENTINES?", "VALENTINES LANG EHH", "Will you be my valentines? Pretty Please"]
 const yesvalentines = "You have availed a date with me on Cafe Nieves - Estancia de Lorenzo. See you"
